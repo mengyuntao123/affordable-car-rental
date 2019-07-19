@@ -14,7 +14,7 @@
         
         <div class="biaoge">
           <table border="2" cellspacing="0">
-    <tr class="hrt" v-for="(item,inde) in lt">
+    <tr class="hrt" v-for="(item,inde) in lt" :key="inde">
         <th>{{item.name}}</th>
         <th>{{item.Contact}}</th>
         <th>{{item.cart}}</th>
@@ -466,7 +466,7 @@ mounted(){
   color: #fff;
 }
 table{
-  width: 1134px;
+  width: 1066px;
   height: 54px;
 }
 .active{
@@ -504,6 +504,8 @@ tr th{
  .right{
   margin-top: 50px;
   margin-left: 50px;
+  
+  
  }
  .biaoge{
        margin-top: 73px;
@@ -512,7 +514,7 @@ tr th{
    display: flex;
    justify-content: space-around;
    align-items: center;
-   width: 170px;
+  //  width: 170px;
  }
 .ipt{
   display: flex;
