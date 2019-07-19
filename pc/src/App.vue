@@ -29,4 +29,10 @@ body,
   height: 100%;
   /* overflow: hidden; */
 }
+// @media screen and (max-width:1336px){
+//   .bit .right{
+//     margin-top: -633px;
+//     margin-left: 217px;
+// }
+// }
 </style>

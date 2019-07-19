@@ -359,7 +359,8 @@ export default {
    fn(index,e){
      this.num=index;
      e = e || window.event;
-			e.preventDefault();
+      e.preventDefault();
+      console.log(this.a)
    },
    //点击删除
    f1(index,e){
@@ -368,8 +369,11 @@ export default {
      this.nt=index;
      setTimeout(()=>{
        this.a[index].bol = !this.a[index].bol;
+      // this.a.splice(index,1)
+      // console.log(this.a.splice(index,1));
+      // console.log(index);
      },200)
-     console.log(index);
+     
      
    },
    f2(id,e){
@@ -437,6 +441,8 @@ mounted(){
 </script>
 
 <style scoped lang="less">
+
+
 .ai{
   display: contents;
 }

@@ -32,9 +32,9 @@ export default {
     return {
       fenlei: [
         { text: "首页", img_src: require("./img/sy.png"), src: "/ber" },
-        { text: "会员管理", img_src: require("./img/hy.png"), src: "" },
+        { text: "会员管理", img_src: require("./img/hy.png"), src: "/index" },
         { text: "预定管理", img_src: require("./img/yd.png"), src: "" },
-        { text: "费用结算", img_src: require("./img/fy.png"), src: "" },
+        { text: "费用结算", img_src: require("./img/fy.png"), src: "/CostSettlement" },
         { text: "车辆管理", img_src: require("./img/cl.png"), src: "" }
       ],
       num: 0
@@ -76,10 +76,8 @@ header {
   width: 100%;
   padding: 42px;
   display: flex;
-  // flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  // background-color: rgb(155, 31, 31);
   .head-left {
     display: flex;
     align-items: center;
