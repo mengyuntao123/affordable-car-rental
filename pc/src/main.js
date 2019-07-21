@@ -31,7 +31,7 @@ Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
 new Vue({
-  el: '#app',
+  el:'#app',
   router,
   components: { App },
   template: '<App/>',

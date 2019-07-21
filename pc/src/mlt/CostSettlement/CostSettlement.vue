@@ -136,7 +136,7 @@ export default {
          returnTime:"2019-9-20",
          bol:true
         },
-           {name:"张环",
+         {name:"张环",
          phone:'18002389009',
          carType:"雷克萨斯",
          carPhone:"豫A999999",
@@ -144,8 +144,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
-         bol:true
-        },
+         bol:true},
            {name:"李朗",
          phone:'19002389009',
          carType:"雷克萨斯",
@@ -154,8 +153,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
-         bol:true
-        },
+         bol:true},
            {name:"问责一",
          phone:'134552389009',
          carType:"雷克萨斯",
@@ -164,8 +162,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
-         bol:true
-        },
+         bol:true},
            {name:"耿毛",
          phone:'15756798080',
          carType:"雷克萨斯",
@@ -360,7 +357,7 @@ export default {
      this.num=index;
      e = e || window.event;
       e.preventDefault();
-      console.log(this.a)
+      // console.log(this.a)
    },
    //点击删除
    f1(index,e){
@@ -368,10 +365,7 @@ export default {
 			e.preventDefault();
      this.nt=index;
      setTimeout(()=>{
-       this.a[index].bol = !this.a[index].bol;
-      // this.a.splice(index,1)
-      // console.log(this.a.splice(index,1));
-      // console.log(index);
+      this.list.splice(index,1)
      },200)
      
      
@@ -432,6 +426,16 @@ mounted(){
  this.searc=this.list;
  this.a = this.searc.slice((this.tl-1)*this.to,this.tl*this.to);
  this.totlePages = Math.ceil(this.list.length / 7);
+
+   this.$axios
+   .get('http://172.25.1.198:8080/users/findAll')
+   .then((response)=>{
+    console.log(response.data)
+   })
+   .catch((error)=>{
+     console.log(error)
+   })
+
 },
 
   components: {
@@ -488,6 +492,8 @@ tr td{
   width: 120px;
   height: 50px;
   font-size: 16px;
+  color: #909399;
+  font-size: 14px;
   span{
    
     display: inline-block;
@@ -497,9 +503,11 @@ tr td{
   }
 }
 tr th{
-  background: #E8E8E8;
+  background: #f0f0f0;
   height: 54px;
   // width:212px;
+  color: #909399;
+  font-size: 14px;
 }
  .right{
   margin-top: 50px;

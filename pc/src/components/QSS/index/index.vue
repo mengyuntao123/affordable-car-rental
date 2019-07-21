@@ -128,7 +128,7 @@ export default {
   height: 100%;
   border: 1px solid #cccccc;
   .realTime {
-    width: 1134px;
+    width: 1085px;
     height: 158px;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 10px 34px 4px rgba(204, 204, 204, 0.27);
